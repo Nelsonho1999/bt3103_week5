@@ -100,7 +100,9 @@ def lambda_handler(event, context):
     
     method = event.get('httpMethod',{}) 
         
-    indexPage=
+    indexPage= None
+    with open("index.html", "r") as f:
+        indexPage = f.read();
 
     if method == 'GET':
         return {
